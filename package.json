@@ -1,0 +1,59 @@
+{
+  "name": "kh-mart-pos",
+  "version": "0.1.0",
+  "description": "KH Mart Point of Sale System",
+  "private": true,
+  "author": "Put Sophearith",
+  "main": "main.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "build:exe": "electron-builder"
+  },
+  "build": {
+    "appId": "com.khmart.pos",
+    "productName": "KH Mart POS",
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": "portable",
+      "signAndEditExecutable": false
+    },
+    "files": [
+      "main.js",
+      "!node_modules"
+    ],
+    "asar": true,
+    "nsis": {
+      "oneClick": true,
+      "allowToChangeInstallationDirectory": false
+    }
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.4.2",
+    "lucide-react": "^1.33.0",
+    "mongoose": "^9.9.3",
+    "next": "16.3.1",
+    "next-auth": "^5.0.0-beta.32",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-hot-toast": "^2.6.0",
+    "recharts": "^3.10.1",
+    "swr": "^2.5.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "electron": "^43.4.1",
+    "electron-builder": "^26.15.3",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.1",
+    "typescript": "^5"
+  }
+}
